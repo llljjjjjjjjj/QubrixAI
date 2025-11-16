@@ -1,0 +1,79 @@
+{
+  "documents": [
+    {
+      "annotated_pdf_url": "/api/jobs/9a0a498e-dedf-4499-9575-7512db6131da/docs/7f9635e6-f2e7-4be4-94a5-101b6bd374ee/annotated.pdf",
+      "id": "7f9635e6-f2e7-4be4-94a5-101b6bd374ee",
+      "original_filename": "перечень-31-.pdf",
+      "pages": [
+        {
+          "image_url": "/api/jobs/9a0a498e-dedf-4499-9575-7512db6131da/docs/7f9635e6-f2e7-4be4-94a5-101b6bd374ee/page-1.png",
+          "objects": [
+            {
+              "bbox": [
+                1200,
+                1492,
+                1637,
+                1801
+              ],
+              "color": "red",
+              "confidence": 0.9,
+              "type": "signature"
+            },
+            {
+              "bbox": [
+                2146,
+                103,
+                2910,
+                772
+              ],
+              "color": "blue",
+              "confidence": 0.9,
+              "type": "stamp"
+            }
+          ],
+          "page_number": 1
+        },
+        {
+          "image_url": "/api/jobs/9a0a498e-dedf-4499-9575-7512db6131da/docs/7f9635e6-f2e7-4be4-94a5-101b6bd374ee/page-2.png",
+          "objects": [
+            {
+              "bbox": [
+                2800,
+                545,
+                3211,
+                865
+              ],
+              "color": "red",
+              "confidence": 0.9,
+              "type": "signature"
+            },
+            {
+              "bbox": [
+                2189,
+                540,
+                2851,
+                1235
+              ],
+              "color": "blue",
+              "confidence": 0.95,
+              "type": "stamp"
+            }
+          ],
+          "page_number": 2
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "by_type": {
+      "qrcode": 0,
+      "signature": 2,
+      "stamp": 2
+    },
+    "job_id": "9a0a498e-dedf-4499-9575-7512db6131da",
+    "stats_image_url": "/api/jobs/9a0a498e-dedf-4499-9575-7512db6131da/stats.png",
+    "total_documents": 1,
+    "total_objects": 4,
+    "total_pages": 2
+  }
+}

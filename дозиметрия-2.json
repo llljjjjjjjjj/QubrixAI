@@ -1,0 +1,112 @@
+{
+  "documents": [
+    {
+      "annotated_pdf_url": "/api/jobs/31acab3d-4e7f-4b61-95d1-5c6c590edce1/docs/08fc9c8a-8391-4318-84c5-1ef294db7a78/annotated.pdf",
+      "id": "08fc9c8a-8391-4318-84c5-1ef294db7a78",
+      "original_filename": "дозиметрия-2.pdf",
+      "pages": [
+        {
+          "image_url": "/api/jobs/31acab3d-4e7f-4b61-95d1-5c6c590edce1/docs/08fc9c8a-8391-4318-84c5-1ef294db7a78/page-1.png",
+          "objects": [
+            {
+              "bbox": [
+                858,
+                1750,
+                1542,
+                2449
+              ],
+              "color": "blue",
+              "confidence": 0.9,
+              "type": "stamp"
+            }
+          ],
+          "page_number": 1
+        },
+        {
+          "image_url": "/api/jobs/31acab3d-4e7f-4b61-95d1-5c6c590edce1/docs/08fc9c8a-8391-4318-84c5-1ef294db7a78/page-2.png",
+          "objects": [
+            {
+              "bbox": [
+                1215,
+                2419,
+                1891,
+                3113
+              ],
+              "color": "blue",
+              "confidence": 0.9,
+              "type": "stamp"
+            },
+            {
+              "bbox": [
+                2531,
+                2779,
+                2862,
+                2882
+              ],
+              "color": "red",
+              "confidence": 0.7,
+              "type": "signature"
+            }
+          ],
+          "page_number": 2
+        },
+        {
+          "image_url": "/api/jobs/31acab3d-4e7f-4b61-95d1-5c6c590edce1/docs/08fc9c8a-8391-4318-84c5-1ef294db7a78/page-3.png",
+          "objects": [],
+          "page_number": 3
+        },
+        {
+          "image_url": "/api/jobs/31acab3d-4e7f-4b61-95d1-5c6c590edce1/docs/08fc9c8a-8391-4318-84c5-1ef294db7a78/page-4.png",
+          "objects": [
+            {
+              "bbox": [
+                1506,
+                3026,
+                1782,
+                3139
+              ],
+              "color": "red",
+              "confidence": 0.9,
+              "type": "signature"
+            },
+            {
+              "bbox": [
+                822,
+                2995,
+                1491,
+                3679
+              ],
+              "color": "blue",
+              "confidence": 0.98,
+              "type": "stamp"
+            },
+            {
+              "bbox": [
+                2346,
+                3417,
+                2528,
+                3499
+              ],
+              "color": "red",
+              "confidence": 0.8,
+              "type": "signature"
+            }
+          ],
+          "page_number": 4
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "by_type": {
+      "qrcode": 0,
+      "signature": 3,
+      "stamp": 3
+    },
+    "job_id": "31acab3d-4e7f-4b61-95d1-5c6c590edce1",
+    "stats_image_url": "/api/jobs/31acab3d-4e7f-4b61-95d1-5c6c590edce1/stats.png",
+    "total_documents": 1,
+    "total_objects": 6,
+    "total_pages": 4
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "documents": [
+    {
+      "annotated_pdf_url": "/api/jobs/460695fe-d8f3-401b-a38a-0c73da4e2267/docs/2a11a486-e68e-4618-b434-747dc62d5042/annotated.pdf",
+      "id": "2a11a486-e68e-4618-b434-747dc62d5042",
+      "original_filename": "Паспортпроекта-41-.pdf",
+      "pages": [
+        {
+          "image_url": "/api/jobs/460695fe-d8f3-401b-a38a-0c73da4e2267/docs/2a11a486-e68e-4618-b434-747dc62d5042/page-1.png",
+          "objects": [],
+          "page_number": 1
+        },
+        {
+          "image_url": "/api/jobs/460695fe-d8f3-401b-a38a-0c73da4e2267/docs/2a11a486-e68e-4618-b434-747dc62d5042/page-2.png",
+          "objects": [
+            {
+              "bbox": [
+                2008,
+                3551,
+                2688,
+                4266
+              ],
+              "color": "blue",
+              "confidence": 0.9,
+              "type": "stamp"
+            },
+            {
+              "bbox": [
+                2542,
+                3911,
+                2655,
+                4112
+              ],
+              "color": "red",
+              "confidence": 0.8,
+              "type": "signature"
+            },
+            {
+              "bbox": [
+                2542,
+                4065,
+                2655,
+                4266
+              ],
+              "color": "red",
+              "confidence": 0.8,
+              "type": "signature"
+            }
+          ],
+          "page_number": 2
+        },
+        {
+          "image_url": "/api/jobs/460695fe-d8f3-401b-a38a-0c73da4e2267/docs/2a11a486-e68e-4618-b434-747dc62d5042/page-3.png",
+          "objects": [],
+          "page_number": 3
+        },
+        {
+          "image_url": "/api/jobs/460695fe-d8f3-401b-a38a-0c73da4e2267/docs/2a11a486-e68e-4618-b434-747dc62d5042/page-4.png",
+          "objects": [],
+          "page_number": 4
+        },
+        {
+          "image_url": "/api/jobs/460695fe-d8f3-401b-a38a-0c73da4e2267/docs/2a11a486-e68e-4618-b434-747dc62d5042/page-5.png",
+          "objects": [
+            {
+              "bbox": [
+                1815,
+                710,
+                2189,
+                926
+              ],
+              "color": "red",
+              "confidence": 0.9,
+              "type": "signature"
+            },
+            {
+              "bbox": [
+                1666,
+                401,
+                2342,
+                1101
+              ],
+              "color": "blue",
+              "confidence": 0.95,
+              "type": "stamp"
+            },
+            {
+              "bbox": [
+                1989,
+                1117,
+                2302,
+                1276
+              ],
+              "color": "red",
+              "confidence": 0.9,
+              "type": "signature"
+            }
+          ],
+          "page_number": 5
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "by_type": {
+      "qrcode": 0,
+      "signature": 4,
+      "stamp": 2
+    },
+    "job_id": "460695fe-d8f3-401b-a38a-0c73da4e2267",
+    "stats_image_url": "/api/jobs/460695fe-d8f3-401b-a38a-0c73da4e2267/stats.png",
+    "total_documents": 1,
+    "total_objects": 6,
+    "total_pages": 5
+  }
+}

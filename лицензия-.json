@@ -1,0 +1,131 @@
+{
+  "documents": [
+    {
+      "annotated_pdf_url": "/api/jobs/da8e604e-0994-494f-9de6-b76ae0335030/docs/2ae25e41-8c5e-49c2-a7c7-f0d972fccdd4/annotated.pdf",
+      "id": "2ae25e41-8c5e-49c2-a7c7-f0d972fccdd4",
+      "original_filename": "лицензия-.pdf",
+      "pages": [
+        {
+          "image_url": "/api/jobs/da8e604e-0994-494f-9de6-b76ae0335030/docs/2ae25e41-8c5e-49c2-a7c7-f0d972fccdd4/page-1.png",
+          "objects": [
+            {
+              "bbox": [
+                233,
+                4209,
+                826,
+                4817
+              ],
+              "color": "green",
+              "confidence": 0.99,
+              "type": "qrcode",
+              "url": "https://www.armeta.ai/"
+            },
+            {
+              "bbox": [
+                1018,
+                4209,
+                1611,
+                4817
+              ],
+              "color": "green",
+              "confidence": 0.99,
+              "type": "qrcode",
+              "url": "https://www.armeta.ai/"
+            },
+            {
+              "bbox": [
+                1800,
+                4209,
+                2393,
+                4817
+              ],
+              "color": "green",
+              "confidence": 0.99,
+              "type": "qrcode",
+              "url": "https://www.armeta.ai/"
+            },
+            {
+              "bbox": [
+                2575,
+                4209,
+                3164,
+                4817
+              ],
+              "color": "green",
+              "confidence": 0.99,
+              "type": "qrcode",
+              "url": "https://www.armeta.ai/"
+            }
+          ],
+          "page_number": 1
+        },
+        {
+          "image_url": "/api/jobs/da8e604e-0994-494f-9de6-b76ae0335030/docs/2ae25e41-8c5e-49c2-a7c7-f0d972fccdd4/page-2.png",
+          "objects": [
+            {
+              "bbox": [
+                182,
+                4266,
+                778,
+                4873
+              ],
+              "color": "green",
+              "confidence": 0.99,
+              "type": "qrcode",
+              "url": "https://www.armeta.ai/"
+            },
+            {
+              "bbox": [
+                938,
+                4266,
+                1535,
+                4873
+              ],
+              "color": "green",
+              "confidence": 0.99,
+              "type": "qrcode",
+              "url": "https://www.armeta.ai/"
+            },
+            {
+              "bbox": [
+                1717,
+                4266,
+                2313,
+                4873
+              ],
+              "color": "green",
+              "confidence": 0.99,
+              "type": "qrcode",
+              "url": "https://www.armeta.ai/"
+            },
+            {
+              "bbox": [
+                2488,
+                4266,
+                3084,
+                4873
+              ],
+              "color": "green",
+              "confidence": 0.99,
+              "type": "qrcode",
+              "url": "https://www.armeta.ai/"
+            }
+          ],
+          "page_number": 2
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "by_type": {
+      "qrcode": 8,
+      "signature": 0,
+      "stamp": 0
+    },
+    "job_id": "da8e604e-0994-494f-9de6-b76ae0335030",
+    "stats_image_url": "/api/jobs/da8e604e-0994-494f-9de6-b76ae0335030/stats.png",
+    "total_documents": 1,
+    "total_objects": 8,
+    "total_pages": 2
+  }
+}
