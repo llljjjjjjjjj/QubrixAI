@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QubrixAI — Automatic verification of construction documents</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-wrap">
+    <main class="panel" aria-label="Hero section with video background">
+      <div class="panel-bg" aria-hidden="true">
+        <video
+          class="panel-bg__video"
+          src="bg.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="bg.png"
+        ></video>
+      </div>
+
+      <header class="topbar container">
+        <a href="/" class="brand" aria-label="QubrixAI home">
+          <img src="l.png" alt="QubrixAI logo" />
+          <span class="brand-name">QubrixAI</span>
+        </a>
+      </header>
+
+      <section class="hero container" aria-label="Intro">
+        <h1 class="hero-title">
+          Automatic verification of<br class="br-lg" />
+          construction documents
+        </h1>
+        <p class="hero-subtitle">
+          Upload building permits, drawings and contracts as PDF. QubrixAI
+          finds handwritten signatures, stamps and QR codes on every page and returns
+          both an annotated PDF and a structured JSON report.
+        </p>
+      </section>
+    </main>
+
+    <section class="madefor container" aria-label="Who QubrixAI is for">
+      <h2 class="madefor__title">QubrixAI is made for real construction workflows</h2>
+
+      <article class="feature">
+        <div class="feature__text feature__text--right">
+          <h3 class="feature__heading">Compliance teams</h3>
+          <p class="feature__desc">
+            Quickly check whether every drawing and permit is properly signed,
+            stamped and linked with QR codes without scrolling through hundreds
+            of pages by hand.
+          </p>
+        </div>
+        <div class="feature__media">
+          <img src="main-img1.png" alt="Compliance overview dashboard" class="img img--landscape-a" />
+        </div>
+      </article>
+
+      <article class="feature feature--reverse feature--gap-lg">
+        <div class="feature__text feature__text--right">
+          <h3 class="feature__heading">Project managers</h3>
+          <p class="feature__desc">
+            Instantly see which sheets are missing signatures or stamps, so you
+            can fix issues before they hit inspection or handover deadlines.
+          </p>
+        </div>
+        <div class="feature__media">
+          <img src="main-img2.png" alt="Document checklist with statuses" class="img img--landscape-b" />
+        </div>
+      </article>
+
+      <article class="feature feature--gap-lg">
+        <div class="feature__text feature__text--right">
+          <h3 class="feature__heading">Digitalization &amp; BIM teams</h3>
+          <p class="feature__desc">
+            Turn visual elements on legacy paper scans into structured data that
+            can be integrated into your internal systems and dashboards.
+          </p>
+        </div>
+        <div class="feature__media">
+          <img src="main-img3.png" alt="Analytics for signatures, stamps and QR codes" class="img img--portrait" />
+        </div>
+      </article>
+    </section>
+
+    <section class="app container" aria-label="QubrixAI app">
+      <div class="app-grid">
+        <div class="app-left">
+          <h2 class="app-title">
+            Run automatic document inspection
+          </h2>
+          <p class="app-subtitle">
+            Upload one PDF or a ZIP archive with many PDFs. QubrixAI converts
+            them to images, detects handwritten signatures, stamps and QR codes,
+            draws bounding boxes and generates a JSON report with full coordinates.
+          </p>
+
+          <div id="summary-card" class="summary-card" hidden>
+            <h3 class="summary-title">Summary for this run</h3>
+            <div class="summary-numbers">
+              <div class="summary-item">
+                <span class="summary-label">Documents</span>
+                <span id="summary-docs" class="summary-value">0</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Pages</span>
+                <span id="summary-pages" class="summary-value">0</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Detected elements</span>
+                <span id="summary-objects" class="summary-value">0</span>
+              </div>
+            </div>
+            <p id="summary-breakdown" class="summary-breakdown"></p>
+          </div>
+        </div>
+
+        <div class="app-right">
+          <div class="upload-card">
+            <div
+              id="dropzone"
+              class="upload-dropzone"
+              tabindex="0"
+              role="button"
+              aria-label="Drop PDF or ZIP files here or click to browse"
+            >
+              <p class="upload-main">Drop PDF or ZIP here</p>
+              <p class="upload-or">or</p>
+              <button type="button" id="browse-btn" class="btn btn--secondary">
+                Browse files
+              </button>
+              <input
+                id="file-input"
+                class="upload-input"
+                type="file"
+                multiple
+                accept=".pdf,.zip"
+              />
+              <p id="upload-status" class="upload-status">
+                No files selected yet.
+              </p>
+            </div>
+          </div>
+
+          <div class="legend-card">
+            <h3 class="legend-title">Color legend</h3>
+            <ul class="legend-list">
+              <li>
+                <span class="legend-dot legend-dot--signature"></span>
+                Signature
+              </li>
+              <li>
+                <span class="legend-dot legend-dot--stamp"></span>
+                Stamp / seal
+              </li>
+              <li>
+                <span class="legend-dot legend-dot--qrcode"></span>
+                QR code
+              </li>
+            </ul>
+          </div>
+
+          <button
+            id="process-btn"
+            class="btn"
+            type="button"
+            disabled
+          >
+            Run QubrixAI analysis
+          </button>
+
+          <p id="results-placeholder" class="results-placeholder">
+            After processing you will see document thumbnails, full-screen pages viewer,
+            JSON output and analytics here.
+          </p>
+
+          <div id="results" class="results" hidden>
+            <section class="results-section results-section--split">
+              <div>
+                <h3 class="results-heading">Annotated pages</h3>
+                <div id="pages-viewer" class="pages-viewer"></div>
+              </div>
+              <div>
+                <h3 class="results-heading">JSON output</h3>
+                <pre id="json-viewer" class="json-viewer"></pre>
+                <button
+                  id="download-json-btn"
+                  class="btn btn--secondary"
+                  type="button"
+                >
+                  Download JSON
+                </button>
+              </div>
+            </section>
+
+            <section class="results-section">
+              <h3 class="results-heading">Analytics</h3>
+              <img
+                id="stats-image"
+                class="stats-image"
+                alt="Detected elements statistics"
+                hidden
+              />
+              <p id="stats-summary" class="stats-summary"></p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div
+    id="viewer-overlay"
+    class="viewer-overlay"
+    hidden
+    aria-hidden="true"
+  >
+    <div
+      class="viewer-overlay__inner"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Annotated document viewer"
+    >
+      <header class="viewer-overlay__header">
+        <div class="viewer-overlay__titles">
+          <h3 id="viewer-title" class="viewer-overlay__title"></h3>
+          <p id="viewer-page-indicator" class="viewer-overlay__subtitle"></p>
+        </div>
+        <button
+          id="viewer-close"
+          class="viewer-overlay__close"
+          type="button"
+          aria-label="Close viewer"
+        >
+          ✕
+        </button>
+      </header>
+      <div class="viewer-overlay__body">
+        <button
+          id="viewer-prev"
+          class="viewer-overlay__nav viewer-overlay__nav--prev"
+          type="button"
+          aria-label="Previous page"
+        >
+          ‹
+        </button>
+        <div class="viewer-overlay__image-wrap">
+          <img
+            id="viewer-image"
+            class="viewer-overlay__image"
+            alt="Annotated page"
+          />
+        </div>
+        <button
+          id="viewer-next"
+          class="viewer-overlay__nav viewer-overlay__nav--next"
+          type="button"
+          aria-label="Next page"
+        >
+          ›
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

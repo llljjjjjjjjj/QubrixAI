@@ -1,0 +1,9 @@
+flask
+pdf2image
+opencv-python-headless
+numpy
+img2pdf
+pyzbar
+Pillow
+matplotlib
+google-genai
